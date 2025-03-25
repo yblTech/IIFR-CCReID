@@ -1,0 +1,6 @@
+Hyper:
+  alpha: 0.1
+  p : 1.0
+  k: 0.05
+  beta: 1.0
+  eta: 1.0

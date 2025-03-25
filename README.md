@@ -35,17 +35,17 @@ Follow these steps to prepare the dataset:
 ## Running the Code
 ### Train the Model
 ```bash
-sh train.sh
-```
-
-### Evaluate the Model
-```bash
 sh run.sh
 ```
 
-### Generate Adversarial Samples (if applicable)
+### Only DSIFLF
 ```bash
-python generate.py --input path/to/image --output path/to/save
+python -m torch.distributed.launch --nproc_per_node=2 --master_port 12345 main-dsif.py --dataset ... --cfg ... --gpu 0,1
+```
+
+### Generate Description
+```bash
+python caption/generate.py 
 ```
 
 
